@@ -19,7 +19,7 @@ public class BmiCalculatorController {
 	public BmiData retrieveBmiValue(
 			@PathVariable double height,
 			@PathVariable double weight) {
-		BmiCalculator bmiCal = new BmiCalculator(height, weight);
+		BmiCalculator bmiCal = new BmiCalculator();
 		double bmiValue = bmiCal.bmiCalculator(height, weight);
 		BmiData bmiData = new BmiData(height, weight, bmiValue);
 		bmiData = repository.save(bmiData);

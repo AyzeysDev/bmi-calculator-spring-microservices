@@ -4,7 +4,6 @@ public class GenerateBmiRange {
 	  private String range;
 	  private double bmi;
 	  private String name;
-	  private String description;
 	  
 	  public GenerateBmiRange(double bmi, String name) {
 		  this.bmi = bmi;
@@ -31,9 +30,6 @@ public class GenerateBmiRange {
 		return "Hey " + this.name + " based on your BMI you're " +  this.range ;
 	}
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
 	
 	public void computeRange() {
 		if (bmi < 18.5) {
